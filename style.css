@@ -919,6 +919,44 @@ header.scrolled {
     display: block;
 }
 
+.cert-modal-fallback {
+    min-height: 320px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.cert-modal-fallback ion-icon {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+}
+
+.cert-modal-fallback p {
+    margin: 0;
+    max-width: 24rem;
+}
+
+.cert-modal-open {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.cert-modal-open:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
 /* =========================================================================
    EXPERIENCE SECTION (TIMELINE)
    ========================================================================= */
@@ -1423,5 +1461,27 @@ header.scrolled {
     
     .timeline-dot {
         left: 24px;
+    }
+
+    .cert-preview {
+        display: none;
+    }
+
+    .cert-modal-overlay {
+        padding: 0.75rem;
+    }
+
+    .cert-modal-box {
+        width: 100%;
+        max-height: 88vh;
+    }
+
+    .cert-modal-body {
+        min-height: auto;
+        overflow-y: auto;
+    }
+
+    .cert-modal-body iframe {
+        min-height: 60vh;
     }
 }

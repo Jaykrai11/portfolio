@@ -67,6 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const certModalBody = document.getElementById('cert-modal-body');
     const certModalClose = document.getElementById('cert-modal-close');
 
+    function isMobileCertificateView() {
+        return window.matchMedia('(max-width: 768px)').matches;
+    }
+
     function openModal(src, title, type = 'pdf') {
         certModalTitle.textContent = title || 'Document';
         certModalBody.innerHTML = '';
@@ -76,6 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = src;
             img.alt = title;
             certModalBody.appendChild(img);
+        } else if (isMobileCertificateView()) {
+            const fallback = document.createElement('div');
+            fallback.className = 'cert-modal-fallback';
+            fallback.innerHTML = `
+                <ion-icon name="document-text-outline"></ion-icon>
+                <p>PDF preview is limited on smaller screens.</p>
+                <a class="cert-modal-open" href="${src}" target="_blank" rel="noopener noreferrer">Open Certificate</a>
+            `;
+            certModalBody.appendChild(fallback);
         } else {
             const frame = document.createElement('iframe');
             frame.src = src;
