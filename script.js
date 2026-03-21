@@ -67,28 +67,97 @@ document.addEventListener('DOMContentLoaded', () => {
     const certModalBody = document.getElementById('cert-modal-body');
     const certModalClose = document.getElementById('cert-modal-close');
     const certificateCards = document.querySelectorAll('.cert-card');
+    const pdfjsCdn = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+    const pdfjsWorkerCdn = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    let pdfJsPromise = null;
 
     function isMobileCertificateView() {
         return window.matchMedia('(max-width: 768px)').matches;
     }
 
-    function getCertificateLink(card) {
-        return card.getAttribute('data-src') || '';
+    function loadPdfJs() {
+        if (window.pdfjsLib) {
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorkerCdn;
+            return Promise.resolve(window.pdfjsLib);
+        }
+
+        if (!pdfJsPromise) {
+            pdfJsPromise = new Promise((resolve, reject) => {
+                const existingScript = document.querySelector('script[data-pdfjs="true"]');
+                if (existingScript && window.pdfjsLib) {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorkerCdn;
+                    resolve(window.pdfjsLib);
+                    return;
+                }
+
+                const script = document.createElement('script');
+                script.src = pdfjsCdn;
+                script.async = true;
+                script.dataset.pdfjs = 'true';
+                script.onload = () => {
+                    window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorkerCdn;
+                    resolve(window.pdfjsLib);
+                };
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+        }
+
+        return pdfJsPromise;
     }
 
-    function buildCertificateFallback(card) {
-        const title = card.getAttribute('data-title') || 'Certificate';
-        const src = getCertificateLink(card);
+    async function renderPdfPreview(src, canvas, targetWidth, targetHeight, mode = 'contain') {
+        const pdfjsLib = await loadPdfJs();
+        const loadingTask = pdfjsLib.getDocument({ url: src });
+        const pdf = await loadingTask.promise;
+        const page = await pdf.getPage(1);
+        const baseViewport = page.getViewport({ scale: 1 });
+        const fitScale = mode === 'cover'
+            ? Math.max(targetWidth / baseViewport.width, targetHeight / baseViewport.height)
+            : Math.min(targetWidth / baseViewport.width, targetHeight / baseViewport.height);
+        const scale = Math.max(fitScale, 0.1);
+        const viewport = page.getViewport({ scale });
+
+        const outputScale = window.devicePixelRatio || 1;
+        canvas.width = Math.floor(viewport.width * outputScale);
+        canvas.height = Math.floor(viewport.height * outputScale);
+        canvas.style.width = `${Math.floor(viewport.width)}px`;
+        canvas.style.height = `${Math.floor(viewport.height)}px`;
+
+        const context = canvas.getContext('2d');
+        context.setTransform(outputScale, 0, 0, outputScale, 0, 0);
+
+        await page.render({
+            canvasContext: context,
+            viewport,
+        }).promise;
+    }
+
+    function buildCertificatePreview(card) {
+        const src = card.getAttribute('data-src') || '';
         const wrapper = document.createElement('div');
         wrapper.className = 'cert-mobile-preview';
-        wrapper.innerHTML = `
-            <div class="cert-mobile-icon">
-                <ion-icon name="document-text-outline"></ion-icon>
-            </div>
-            <div class="cert-mobile-text">${title}</div>
-            <a class="cert-mobile-open" href="${src}" target="_blank" rel="noopener noreferrer">Open</a>
-        `;
+        const canvas = document.createElement('canvas');
+        canvas.className = 'cert-mobile-canvas';
+        canvas.dataset.src = src;
+        wrapper.appendChild(canvas);
         return wrapper;
+    }
+
+    function scheduleMobilePreviewRender(card, previewWrapper) {
+        const canvas = previewWrapper.querySelector('canvas');
+        if (!canvas) return;
+
+        const src = card.getAttribute('data-src') || canvas.dataset.src || '';
+        const mediaBox = card.firstElementChild;
+        if (!mediaBox) return;
+
+        const width = Math.max(mediaBox.clientWidth - 2, 280);
+        const height = Math.max(mediaBox.clientHeight - 2, 180);
+
+        renderPdfPreview(src, canvas, width, height, 'cover').catch(() => {
+            previewWrapper.classList.add('cert-mobile-preview-error');
+        });
     }
 
     function syncCertificateCardPreviews() {
@@ -104,8 +173,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 if (!existingFallback) {
                     if (cardMedia) {
-                        cardMedia.appendChild(buildCertificateFallback(card));
+                        const previewWrapper = buildCertificatePreview(card);
+                        cardMedia.appendChild(previewWrapper);
+                        requestAnimationFrame(() => scheduleMobilePreviewRender(card, previewWrapper));
                     }
+                } else {
+                    requestAnimationFrame(() => scheduleMobilePreviewRender(card, existingFallback));
                 }
             } else {
                 if (existingFallback) existingFallback.remove();
@@ -135,14 +208,20 @@ document.addEventListener('DOMContentLoaded', () => {
             img.alt = title;
             certModalBody.appendChild(img);
         } else if (isMobileCertificateView()) {
-            const fallback = document.createElement('div');
-            fallback.className = 'cert-modal-fallback';
-            fallback.innerHTML = `
-                <ion-icon name="document-text-outline"></ion-icon>
-                <p>PDF preview is limited on smaller screens.</p>
-                <a class="cert-modal-open" href="${src}" target="_blank" rel="noopener noreferrer">Open Certificate</a>
-            `;
-            certModalBody.appendChild(fallback);
+            const wrapper = document.createElement('div');
+            wrapper.className = 'cert-modal-preview';
+            const canvas = document.createElement('canvas');
+            canvas.className = 'cert-modal-canvas';
+            wrapper.appendChild(canvas);
+            certModalBody.appendChild(wrapper);
+
+            requestAnimationFrame(() => {
+                const width = Math.max(certModalBody.clientWidth - 2, 320);
+                const height = Math.max(certModalBody.clientHeight - 2, 420);
+                renderPdfPreview(src, canvas, width, height, 'contain').catch(() => {
+                    wrapper.classList.add('cert-modal-preview-error');
+                });
+            });
         } else {
             const frame = document.createElement('iframe');
             frame.src = src;
