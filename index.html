@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Kumar Rai | ML Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS and Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for minimal modern icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">JKR.</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <ion-icon name="sunny-outline"></ion-icon>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="tagline">B.Tech CSE Student | Tech Enthusiast</p>
+                <h1 class="hero-title">Hi, I'm <span class="name-highlight">Jay Kumar Rai</span></h1>
+                <h2 class="hero-subtitle">Software & <span class="highlight">Machine Learning Enthusiast</span></h2>
+                <p class="hero-desc">I build robust full-stack applications and intelligent ML models, combining core
+                    computer science principles with modern architecture.</p>
+
+                <div class="hero-btn-group">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <!-- INSTRUCTION: Replace this link with your actual Resume PDF link -->
+                    <a href="javascript:void(0)" class="btn btn-outline" id="resume-btn" 
+                       data-src="assets/resume/Jay_resume.pdf" data-title="Professional Resume">Resume
+                        <ion-icon name="document-text-outline"></ion-icon></a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/Jaykrai11" target="_blank" aria-label="GitHub"><ion-icon
+                            name="logo-github"></ion-icon></a>
+                    <a href="www.linkedin.com/in/jaykumarrai07" target="_blank" aria-label="LinkedIn"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://twitter.com/Jaykrai18" target="_blank" aria-label="Twitter"><ion-icon
+                            name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <!-- INSTRUCTION: Replace profile.png from assets/images/ with your own headshot -->
+                <img src="assets/images/profile.jpeg" alt="Jay Kumar Rai - Profile" class="hero-img">
+                <div class="hero-img-backdrop"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>My journey into technology began with a deep curiosity about how systems communicate beneath
+                            the surface. Today, as a Bachelor of Technology student in Computer Science, that curiosity
+                            has evolved into a versatile engineering skill set. I hold a firm command over core Computer
+                            Science fundamentalsâ€”such as Data Structures, Algorithms, Networking, and Operating
+                            Systemsâ€”bridging the gap between low-level computational theory and high-level
+                            architectural design.</p>
+                        <p>Building upon that foundation, I actively engineer dynamic <strong>Full-Stack web
+                                applications (MongoDB, Express.js, React, Node.js)</strong>, orchestrate intelligent
+                            enterprise workflows via <strong>Robotic Process Automation (Blue Prism, Automation
+                                Anywhere, n8n)</strong>, and train sophisticated <strong>Machine Learning
+                                models</strong>. Whether I am migrating a relational database schema, designing
+                            autonomous business bots, or fine-tuning neural networks, my philosophy remains constant:
+                            write clean, mathematically sound, and scalable code that solves genuine problems.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <h3 style="display: flex; align-items: center; gap: 0.4rem;"><ion-icon
+                                    name="laptop-outline"></ion-icon> Application</h3>
+                            <p>Full-Stack Web, Machine Learning, Automation</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 style="display: flex; align-items: center; gap: 0.4rem;"><ion-icon
+                                    name="layers-outline"></ion-icon> Foundation</h3>
+                            <p>Algorithms, Systems, Database Management</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 style="display: flex; align-items: center; gap: 0.4rem;"><ion-icon
+                                    name="rocket-outline"></ion-icon> Approach</h3>
+                            <p>Analytical, Scalable, User-Centric</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="section-container">
+                <h2 class="section-title">Technical Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><ion-icon name="code-slash-outline"></ion-icon> Software Engineering</h3>
+                        <div class="skill-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Structures</span>
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Networking</span>
+                            <span class="tag">Operating Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><ion-icon name="globe-outline"></ion-icon> Full-Stack Web</h3>
+                        <div class="skill-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><ion-icon name="server-outline"></ion-icon> Databases</h3>
+                        <div class="skill-tags">
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Database Management</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><ion-icon name="hardware-chip-outline"></ion-icon> Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Supervised Learning</span>
+                            <span class="tag">Unsupervised Learning</span>
+                            <span class="tag">Natural Language Processing</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><ion-icon name="cog-outline"></ion-icon> Process Automation</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Blue Prism</span>
+                            <span class="tag">Automation Anywhere</span>
+                            <span class="tag">n8n Workflows</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><ion-icon name="cloud-outline"></ion-icon> Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Salesforce</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Windows</span>
+                            <span class="tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <h2 class="section-title">Selected Works</h2>
+
+                <!-- Featured Project 1 -->
+                <div class="featured-project">
+                    <div class="project-img-container"
+                        style="background-color: var(--bg-secondary); position: relative; overflow: hidden; height: 350px;">
+                        <img src="assets/images/ride-matching.png" alt="Ride Matching System"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-label">Featured Work</span>
+                        <h3 class="project-title">Ride Matching System</h3>
+                        <p class="project-summary">A high-scale location-based scalable backend routing system
+                            generating optimal driver-to-rider dispatch matches mapping dynamic geospatial coordinates.
+                        </p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>GeoSpatial APIs</span>
+                            <span>Backend Architecture</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline btn-small" target="_blank"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                            <a href="#" class="btn btn-text" target="_blank">View Project <ion-icon
+                                    name="arrow-forward-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 2 -->
+                <div class="featured-project reverse">
+                    <div class="project-img-container"
+                        style="background-color: var(--bg-secondary); position: relative; overflow: hidden; height: 350px;">
+                        <img src="assets/images/transaction-gateway.png" alt="Transaction Gateway"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-label">Featured Work</span>
+                        <h3 class="project-title">Transaction Gateway</h3>
+                        <p class="project-summary">A secure payment and transaction processing engine capable of
+                            systematically handling high-throughput idempotent financial requests via distributed
+                            architecture.</p>
+                        <div class="project-tech">
+                            <span>Java Spring</span>
+                            <span>Microservices</span>
+                            <span>Cryptography</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline btn-small" target="_blank"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                            <a href="#" class="btn btn-text" target="_blank">View Project <ion-icon
+                                    name="arrow-forward-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Projects Grid (Hidden by Default) -->
+                <div class="projects-grid" id="more-projects-grid" style="display: none;">
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>ASR Transcripting Engine</h4>
+                            <p style="flex: 1;">A high-accuracy Automatic Speech Recognition (ASR) system built to
+                                transcribe and post-edit complex audio data into text utilizing deep neural networks.
+                            </p>
+                            <div class="project-tech-small">
+                                <span>Deep Learning</span>
+                                <span>Speech-to-Text</span>
+                                <span>Python</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Sentiment Analysis System</h4>
+                            <p style="flex: 1;">An NLP pipeline using ML models to dynamically classify the emotional
+                                sentiment of unstructured text and sentiment data.</p>
+                            <div class="project-tech-small">
+                                <span>NLP</span>
+                                <span>Python</span>
+                                <span>Transformers</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>AQI Prediction Model</h4>
+                            <p style="flex: 1;">A data-driven machine learning model forecasting Air Quality Index (AQI)
+                                thresholds based on continuous environmental factors.</p>
+                            <div class="project-tech-small">
+                                <span>Scikit-Learn</span>
+                                <span>Regression</span>
+                                <span>Data Science</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>EV Charging Optimizer</h4>
+                            <p style="flex: 1;">An algorithmic engine optimizing electric vehicle charging schedules to
+                                slash costs and manage power grid load efficiency.</p>
+                            <div class="project-tech-small">
+                                <span>Optimization</span>
+                                <span>Algorithms</span>
+                                <span>Python</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Real-Time Tracker</h4>
+                            <p style="flex: 1;">Socket-based application architecture tracing continuous GPS coordinate
+                                data streams onto dynamic frontend mapping interfaces.</p>
+                            <div class="project-tech-small">
+                                <span>WebSockets</span>
+                                <span>React</span>
+                                <span>Logistics</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Library Management System</h4>
+                            <p style="flex: 1;">A full-stack relational database application handling multi-role
+                                authenticated inventory tracking and book circulation logic.</p>
+                            <div class="project-tech-small">
+                                <span>SQL</span>
+                                <span>DBMS Engine</span>
+                                <span>Full-Stack</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Coding Profile Manager</h4>
+                            <p style="flex: 1;">A dashboard dynamically aggregating statistical scores and algorithmic
+                                competition ratings across top platforms via REST APIs.</p>
+                            <div class="project-tech-small">
+                                <span>MERN Stack</span>
+                                <span>REST APIs</span>
+                                <span>Data Aggregation</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Binary Tree Visualizer</h4>
+                            <p style="flex: 1;">An interactive frontend DOM interface visually illustrating advanced
+                                tree traversals and native Data Structure methodology.</p>
+                            <div class="project-tech-small">
+                                <span>JavaScript</span>
+                                <span>Algorithms</span>
+                                <span>DOM Design</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Sudoku Solver</h4>
+                            <p style="flex: 1;">A highly optimized logic problem solver operating cleanly via the
+                                recursive backtracking architectural programming paradigm.</p>
+                            <div class="project-tech-small">
+                                <span>C++ Core</span>
+                                <span>Backtracking</span>
+                                <span>Mathematics</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Spotify Clone</h4>
+                            <p style="flex: 1;">A pixel-perfect modern web replica combining complex flex-box layouts
+                                and interactive aesthetic playback UI interfaces.</p>
+                            <div class="project-tech-small">
+                                <span>Clone</span>
+                                <span>Web Media</span>
+                                <span>UI/UX Aesthetics</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Netflix Clone</h4>
+                            <p style="flex: 1;">An immersive entertainment discovery interface mirroring deep streaming
+                                layouts natively utilizing global TMDB integrations.</p>
+                            <div class="project-tech-small">
+                                <span>APIs</span>
+                                <span>React Logic</span>
+                                <span>Responsive</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Tic Tac Toe Engine</h4>
+                            <p style="flex: 1;">A classic logic grid interface featuring an "unbeatable" AI opponent
+                                programmed fundamentally using Minimax computations.</p>
+                            <div class="project-tech-small">
+                                <span>Minimax Algorithm</span>
+                                <span>Logic Tree</span>
+                                <span>Frontend</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Real-Time Collab Editor</h4>
+                            <p style="flex: 1;">A multi-user text editing application utilizing WebSocket connections to
+                                seamlessly synchronize document states live across active clients.</p>
+                            <div class="project-tech-small">
+                                <span>WebSockets</span>
+                                <span>Node.js</span>
+                                <span>Real-Time Events</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content"
+                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
+                            <h4>Expense Tracker Engine</h4>
+                            <p style="flex: 1;">A financial management dashboard that visually parses dynamic income
+                                streams and automatically scales complex dataviz graphing logic.</p>
+                            <div class="project-tech-small">
+                                <span>React</span>
+                                <span>Chart.js</span>
+                                <span>DataViz</span>
+                            </div>
+                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
+                                    name="logo-github"></ion-icon> Source Code</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="view-more-container" style="text-align: center; margin-top: 2rem;">
+                    <button id="view-more-btn" class="btn btn-outline"
+                        style="border-radius: 30px; padding: 1rem 3rem;">View More Projects <ion-icon
+                            name="chevron-down-outline" style="margin-left: 0.5rem;"></ion-icon></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="cert-section">
+            <div class="section-container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="cert-grid">
+                    <!-- Cert Card 1 -->
+                    <div class="cert-card" data-src="rjcerti/Digital System ce.pdf" data-title="Digital Systems"
+                        data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="hardware-chip-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Digital System ce.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Digital Systems</h4>
+                            <p style="font-size: 0.85rem;">Hardware Engineering</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 2 -->
+                    <div class="cert-card" data-src="rjcerti/Full-Stack Developmen Training Cipher Schools.pdf"
+                        data-title="Full-Stack Development" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="globe-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Full-Stack Developmen Training Cipher Schools.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Full-Stack Development
+                            </h4>
+                            <p style="font-size: 0.85rem;">Cipher Schools</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 3 -->
+                    <div class="cert-card" data-src="rjcerti/Fundamentals of Network Communication ce.pdf"
+                        data-title="Fundamentals of Network Communication" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="ribbon-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Fundamentals of Network Communication ce.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Fundamentals of
+                                Network Comm.</h4>
+                            <p style="font-size: 0.85rem;">Networking</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 4 -->
+                    <div class="cert-card" data-src="rjcerti/Gen AI NESSCOM.png" data-title="Generative AI â€” NASSCOM"
+                        data-type="img">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="sparkles-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <img class="cert-preview" src="rjcerti/Gen AI NESSCOM.png" alt="Gen AI Certificate">
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Generative AI</h4>
+                            <p style="font-size: 0.85rem;">NASSCOM</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 5 -->
+                    <div class="cert-card" data-src="rjcerti/Intro to hardware ce.pdf" data-title="Intro to Hardware"
+                        data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="construct-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Intro to hardware ce.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Intro to Hardware</h4>
+                            <p style="font-size: 0.85rem;">Architecture</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 6 -->
+                    <div class="cert-card" data-src="rjcerti/Java.pdf" data-title="Java Programming" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="code-slash-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview" src="rjcerti/Java.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Java Programming</h4>
+                            <p style="font-size: 0.85rem;">Object Oriented Programming</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hidden extra certs (7–17) -->
+                <div id="more-certs-grid" class="cert-grid" style="display:none; margin-top: 2rem;">
+
+                    <!-- Cert Card 7 -->
+                    <div class="cert-card" data-src="rjcerti/Packer Switching Network and algo ce.pdf"
+                        data-title="Packet Switching Networks & Algorithms" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="git-network-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Packer Switching Network and algo ce.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Packet Switching
+                                Networks & Algo</h4>
+                            <p style="font-size: 0.85rem;">Routing</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 8 -->
+                    <div class="cert-card" data-src="rjcerti/Peer-to-Peer Protocols and Local Area Networks ce.pdf"
+                        data-title="Peer-to-Peer Protocols & LANs" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="cellular-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Peer-to-Peer Protocols and Local Area Networks ce.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Peer-to-Peer Protocols
+                                & LANs</h4>
+                            <p style="font-size: 0.85rem;">Infrastructure</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 9 -->
+                    <div class="cert-card" data-src="rjcerti/Programming with js.pdf"
+                        data-title="Programming with JavaScript" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="logo-javascript"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/Programming with js.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Programming with
+                                JavaScript</h4>
+                            <p style="font-size: 0.85rem;">Software Engineering</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 10 -->
+                    <div class="cert-card" data-src="rjcerti/TCP IP and Advanced Topics ce.pdf"
+                        data-title="TCP/IP and Advanced Topics" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="layers-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/TCP IP and Advanced Topics ce.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">TCP/IP and Advanced
+                                Topics</h4>
+                            <p style="font-size: 0.85rem;">Protocols</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 11 -->
+                    <div class="cert-card" data-src="rjcerti/The Bits and Bytes of Computer Networking ce.pdf"
+                        data-title="Bits & Bytes of Computer Networking" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="server-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/The Bits and Bytes of Computer Networking ce.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Bits & Bytes of
+                                Computer Networking</h4>
+                            <p style="font-size: 0.85rem;">Networking</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 12 -->
+                    <div class="cert-card" data-src="rjcerti/The Science of Well-Being.pdf"
+                        data-title="The Science of Well-Being" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="heart-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/The Science of Well-Being.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">The Science of
+                                Well-Being</h4>
+                            <p style="font-size: 0.85rem;">Personal Development</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 13 -->
+                    <div class="cert-card" data-src="rjcerti/automation anywhere essentials certification.pdf"
+                        data-title="Automation Anywhere Essentials" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="build-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/automation anywhere essentials certification.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Automation Anywhere
+                                Essentials</h4>
+                            <p style="font-size: 0.85rem;">Process Automation</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 14 -->
+                    <div class="cert-card" data-src="rjcerti/competition unstop.pdf" data-title="Unstop Competition"
+                        data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="trophy-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/competition unstop.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Unstop Competition
+                            </h4>
+                            <p style="font-size: 0.85rem;">Extracurricular</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 15 -->
+                    <div class="cert-card" data-src="rjcerti/computer communication ce.pdf"
+                        data-title="Computer Communication Systems" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="share-social-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/computer communication ce.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                frameborder="0" scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Computer Communication
+                                Systems</h4>
+                            <p style="font-size: 0.85rem;">Architecture</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 16 -->
+                    <div class="cert-card" data-src="rjcerti/cpp certificate lpu.pdf" data-title="C++ Certification"
+                        data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="logo-markdown"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/cpp certificate lpu.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">C++ Certification</h4>
+                            <p style="font-size: 0.85rem;">LPU Coursework</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert Card 17 -->
+                    <div class="cert-card" data-src="rjcerti/dsa certificate lpu.pdf"
+                        data-title="Data Structures & Algorithms" data-type="pdf">
+                        <div
+                            style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
+                            <ion-icon name="analytics-outline"
+                                style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
+                            <iframe class="cert-preview"
+                                src="rjcerti/dsa certificate lpu.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0"
+                                scrolling="no"></iframe>
+                        </div>
+                        <div class="cert-overlay">
+                            <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
+                        </div>
+                        <div class="cert-info">
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Data Structures &
+                                Algorithms</h4>
+                            <p style="font-size: 0.85rem;">LPU Coursework</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-more-container" style="text-align: center; margin-top: 2rem;">
+                    <button id="view-more-certs-btn" class="btn btn-outline"
+                        style="border-radius: 30px; padding: 1rem 3rem;">View More Certificates <ion-icon
+                            name="chevron-down-outline" style="margin-left: 0.5rem;"></ion-icon></button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Experience & Achievements -->
+        <section id="experience" class="exp-section">
+            <div class="section-container">
+                <h2 class="section-title">Experience & Milestones</h2>
+
+                <div class="timeline">
+
+                    <!-- Internship -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024</span>
+                            <h3>Software Development Intern <span
+                                    style="font-size:0.8rem; font-weight:400; color:var(--text-secondary);">· 1
+                                    Month</span></h3>
+                            <p class="timeline-sub">GauravGo Technologies</p>
+                            <p>Over the course of one month, worked on real-world software development projects —
+                                building and deploying applications, collaborating with teams, and solving practical
+                                engineering challenges.</p>
+                        </div>
+                    </div>
+
+                    <!-- B.Tech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 – Present</span>
+                            <h3>B.Tech — Computer Science & Engineering <span
+                                    style="font-size:0.8rem; font-weight:500; color:var(--text-secondary);">
+                                    (Core)</span></h3>
+                            <p class="timeline-sub">Lovely Professional University (LPU), Phagwara, Kapurthala, Punjab
+                            </p>
+                            <p>Pursuing a Bachelor's in Computer Science, focusing on core engineering principles,
+                                advanced algorithms, and full-stack system architecture.</p>
+                            <div style="margin-top: 0.8rem;">
+                                <span
+                                    style="display:inline-flex; align-items:center; gap:0.5rem; border: 1px solid var(--accent-color); color:var(--accent-color); padding:0.3rem 0.8rem; border-radius:30px; font-size:0.85rem; font-weight:700; letter-spacing:0.5px; background: rgba(var(--accent-rgb), 0.05);">
+                                    Current CGPA: 8.05
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12th -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2022</span>
+                            <h3>Higher Secondary (12th Grade) — CBSE</h3>
+                            <p class="timeline-sub">Noorjahan Children School, Azamgarh, Uttar Pradesh</p>
+                            <p>Completed Class XII under the CBSE board with <strong>72.8%</strong>, focusing on Science
+                                and Mathematics as core subjects.</p>
+                        </div>
+                    </div>
+
+                    <!-- 10th -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2020</span>
+                            <h3>Secondary (10th Grade) — CBSE</h3>
+                            <p class="timeline-sub">Noorjahan Children School, Azamgarh, Uttar Pradesh</p>
+                            <p>Passed Class X under the CBSE board with <strong>74.8%</strong>, establishing a strong
+                                academic foundation in core subjects.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <h2 class="section-title">Get In Touch</h2>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Info -->
+                    <div class="contact-info">
+                        <p class="contact-desc">I'm currently looking for new opportunities and collaborations. Whether
+                            you have a question or just want to say hi, my inbox is always open!</p>
+
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-icon"><ion-icon name="mail-outline"></ion-icon></div>
+                                <div class="info-text">
+                                    <span>Email Me</span>
+                                    <a href="mailto:jaykrai111@gmail.com">jaykrai111@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon"><ion-icon name="call-outline"></ion-icon></div>
+                                <div class="info-text">
+                                    <span>Call Me</span>
+                                    <a href="tel:+916387826127">+91 6387826127</a>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon"><ion-icon name="location-outline"></ion-icon></div>
+                                <div class="info-text">
+                                    <span>Location</span>
+                                    <p>Jalandhar, Punjab, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form action="#" method="POST" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Jay Kumar" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="jay@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Let's talk about..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <ion-icon name="send-outline"></ion-icon>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="social-links-v2">
+                    <a href="https://github.com/Jaykrai11" target="_blank" class="social-item"><ion-icon
+                            name="logo-github"></ion-icon></a>
+                    <a href="https://linkedin.com/in/jaykumarrai07" target="_blank" class="social-item"><ion-icon
+                            name="logo-linkedin"></ion-icon></a>
+                    <a href="https://twitter.com/Jaykrai18" target="_blank" class="social-item"><ion-icon
+                            name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Work</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#experience">Milestones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="mailto:jaykrai111@gmail.com"><ion-icon name="mail-outline"></ion-icon>
+                                jaykrai111@gmail.com</a></li>
+                        <li><a href="tel:+916387826127"><ion-icon name="call-outline"></ion-icon> +91 6387826127</a>
+                        </li>
+                        <li><a href="https://linkedin.com/in/jaykumarrai07" target="_blank"><ion-icon
+                                    name="logo-linkedin"></ion-icon> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Jay Kumar Rai. All rights reserved.</p>
+                </div>
+                <div class="footer-tag">
+                    <p>Designed with <span class="heart"><ion-icon name="heart"></ion-icon></span> in India</p>
+                </div>
+                <a href="#" class="back-to-top">
+                    <ion-icon name="arrow-up-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Popup Modal -->
+    <div id="cert-modal" class="cert-modal-overlay">
+        <div class="cert-modal-box">
+            <button class="cert-modal-close" id="cert-modal-close"><ion-icon name="close-outline"></ion-icon></button>
+            <div class="cert-modal-title" id="cert-modal-title"></div>
+            <div class="cert-modal-body" id="cert-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
