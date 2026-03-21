@@ -66,9 +66,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const certModalTitle = document.getElementById('cert-modal-title');
     const certModalBody = document.getElementById('cert-modal-body');
     const certModalClose = document.getElementById('cert-modal-close');
+    const certificateCards = document.querySelectorAll('.cert-card');
 
     function isMobileCertificateView() {
         return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    function getCertificateLink(card) {
+        return card.getAttribute('data-src') || '';
+    }
+
+    function buildCertificateFallback(card) {
+        const title = card.getAttribute('data-title') || 'Certificate';
+        const src = getCertificateLink(card);
+        const wrapper = document.createElement('div');
+        wrapper.className = 'cert-mobile-preview';
+        wrapper.innerHTML = `
+            <div class="cert-mobile-icon">
+                <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+            <div class="cert-mobile-text">${title}</div>
+            <a class="cert-mobile-open" href="${src}" target="_blank" rel="noopener noreferrer">Open</a>
+        `;
+        return wrapper;
+    }
+
+    function syncCertificateCardPreviews() {
+        certificateCards.forEach(card => {
+            const preview = card.querySelector('.cert-preview');
+            const existingFallback = card.querySelector('.cert-mobile-preview');
+            const cardMedia = card.firstElementChild;
+
+            if (isMobileCertificateView()) {
+                if (preview) {
+                    card.setAttribute('data-preview-src', preview.getAttribute('src') || '');
+                    preview.remove();
+                }
+                if (!existingFallback) {
+                    if (cardMedia) {
+                        cardMedia.appendChild(buildCertificateFallback(card));
+                    }
+                }
+            } else {
+                if (existingFallback) existingFallback.remove();
+
+                if (!preview && cardMedia) {
+                    const previewSrc = card.getAttribute('data-preview-src');
+                    if (previewSrc) {
+                        const restoredPreview = document.createElement('iframe');
+                        restoredPreview.className = 'cert-preview';
+                        restoredPreview.src = previewSrc;
+                        restoredPreview.setAttribute('frameborder', '0');
+                        restoredPreview.setAttribute('scrolling', 'no');
+                        cardMedia.appendChild(restoredPreview);
+                    }
+                }
+            }
+        });
     }
 
     function openModal(src, title, type = 'pdf') {
@@ -114,6 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             openModal(card.getAttribute('data-src'), card.getAttribute('data-title'), card.getAttribute('data-type'));
         });
+    });
+
+    syncCertificateCardPreviews();
+    window.addEventListener('resize', () => {
+        syncCertificateCardPreviews();
     });
 
     function closeCertModal() {
