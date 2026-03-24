@@ -18,6 +18,8 @@
     <!-- Ionicons for minimal modern icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Devicon for tech stack icons -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
@@ -31,6 +33,8 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#coding-profile">Coding</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -61,15 +65,15 @@
                 <div class="hero-btn-group">
                     <a href="#contact" class="btn btn-primary">Contact Me</a>
                     <!-- INSTRUCTION: Replace this link with your actual Resume PDF link -->
-                    <a href="javascript:void(0)" class="btn btn-outline" id="resume-btn" 
-                       data-src="assets/resume/Jay_resume.pdf" data-title="Professional Resume">Resume
+                    <a href="javascript:void(0)" class="btn btn-outline" id="resume-btn"
+                        data-src="assets/resume/Jay_resume.pdf" data-title="Professional Resume">Resume
                         <ion-icon name="document-text-outline"></ion-icon></a>
                 </div>
 
                 <div class="hero-socials">
                     <a href="https://github.com/Jaykrai11" target="_blank" aria-label="GitHub"><ion-icon
                             name="logo-github"></ion-icon></a>
-                    <a href="www.linkedin.com/in/jaykumarrai07" target="_blank" aria-label="LinkedIn"><ion-icon
+                    <a href="https://www.linkedin.com/in/jaykumarrai07" target="_blank" aria-label="LinkedIn"><ion-icon
                             name="logo-linkedin"></ion-icon></a>
                     <a href="https://twitter.com/Jaykrai18" target="_blank" aria-label="Twitter"><ion-icon
                             name="logo-twitter"></ion-icon></a>
@@ -78,7 +82,7 @@
 
             <div class="hero-image-wrapper">
                 <!-- INSTRUCTION: Replace profile.png from assets/images/ with your own headshot -->
-                <img src="assets/images/profile.jpeg" alt="Jay Kumar Rai - Profile" class="hero-img">
+                <img src="assets/images/profile.png" alt="Jay Kumar Rai - Profile" class="hero-img">
                 <div class="hero-img-backdrop"></div>
             </div>
         </section>
@@ -89,19 +93,19 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>My journey into technology began with a deep curiosity about how systems communicate beneath
-                            the surface. Today, as a Bachelor of Technology student in Computer Science, that curiosity
-                            has evolved into a versatile engineering skill set. I hold a firm command over core Computer
-                            Science fundamentalsâ€”such as Data Structures, Algorithms, Networking, and Operating
-                            Systemsâ€”bridging the gap between low-level computational theory and high-level
-                            architectural design.</p>
-                        <p>Building upon that foundation, I actively engineer dynamic <strong>Full-Stack web
-                                applications (MongoDB, Express.js, React, Node.js)</strong>, orchestrate intelligent
-                            enterprise workflows via <strong>Robotic Process Automation (Blue Prism, Automation
-                                Anywhere, n8n)</strong>, and train sophisticated <strong>Machine Learning
-                                models</strong>. Whether I am migrating a relational database schema, designing
-                            autonomous business bots, or fine-tuning neural networks, my philosophy remains constant:
-                            write clean, mathematically sound, and scalable code that solves genuine problems.</p>
+                        <p>My interest in technology started with a simple question: how do well-designed systems stay
+                            fast, reliable, and easy to scale? That curiosity has grown into a practical engineering
+                            mindset shaped by core Computer Science fundamentals such as Data Structures, Algorithms,
+                            Networking, and Operating Systems.</p>
+                        <p>Today, I build across <strong>Full-Stack web development (MongoDB, Express.js, React,
+                                Node.js)</strong>, <strong>Robotic Process Automation</strong> with tools like Blue
+                            Prism, Automation Anywhere, and n8n, and <strong>Machine Learning</strong> projects that
+                            turn data into usable intelligence. I care most about writing clean, efficient, and scalable
+                            code that solves real problems without unnecessary complexity.</p>
+                        <p>Outside of building projects, I like exploring system design, learning how different tools
+                            fit together, and turning ideas into something practical and usable. I’m always looking for
+                            opportunities to collaborate, improve, and create work that feels thoughtful and well
+                            engineered.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-card">
@@ -133,66 +137,68 @@
                     <div class="skill-category">
                         <h3><ion-icon name="code-slash-outline"></ion-icon> Software Engineering</h3>
                         <div class="skill-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">C++</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Data Structures</span>
-                            <span class="tag">Algorithms</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">Operating Systems</span>
+                            <span class="tag"><i class="devicon-c-plain colored"></i> C</span>
+                            <span class="tag"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                            <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+                            <span class="tag"><i class="devicon-python-plain colored"></i> Python</span>
+                            <span class="tag"><ion-icon name="analytics-outline"></ion-icon> Data Structures</span>
+                            <span class="tag"><ion-icon name="terminal-outline"></ion-icon> Algorithms</span>
+                            <span class="tag"><ion-icon name="wifi-outline"></ion-icon> Networking</span>
+                            <span class="tag"><ion-icon name="desktop-outline"></ion-icon> Operating Systems</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
                         <h3><ion-icon name="globe-outline"></ion-icon> Full-Stack Web</h3>
                         <div class="skill-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">React.js</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Express.js</span>
+                            <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span class="tag"><i class="devicon-react-original colored"></i> React.js</span>
+                            <span class="tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span class="tag"><i class="devicon-express-original"></i> Express.js</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
                         <h3><ion-icon name="server-outline"></ion-icon> Databases</h3>
                         <div class="skill-tags">
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Database Management</span>
+                            <span class="tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                            <span class="tag"><i class="devicon-mysql-plain colored"></i> SQL</span>
+                            <span class="tag"><ion-icon name="server-outline"></ion-icon> Database Management</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
                         <h3><ion-icon name="hardware-chip-outline"></ion-icon> Machine Learning</h3>
                         <div class="skill-tags">
-                            <span class="tag">Supervised Learning</span>
-                            <span class="tag">Unsupervised Learning</span>
-                            <span class="tag">Natural Language Processing</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Deep Learning</span>
+                            <span class="tag"><ion-icon name="bulb-outline"></ion-icon> Supervised Learning</span>
+                            <span class="tag"><ion-icon name="git-network-outline"></ion-icon> Unsupervised
+                                Learning</span>
+                            <span class="tag"><ion-icon name="chatbubble-ellipses-outline"></ion-icon> Natural Language
+                                Processing</span>
+                            <span class="tag"><ion-icon name="scan-outline"></ion-icon> Computer Vision</span>
+                            <span class="tag"><ion-icon name="layers-outline"></ion-icon> Deep Learning</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
                         <h3><ion-icon name="cog-outline"></ion-icon> Process Automation</h3>
                         <div class="skill-tags">
-                            <span class="tag">Blue Prism</span>
-                            <span class="tag">Automation Anywhere</span>
-                            <span class="tag">n8n Workflows</span>
+                            <span class="tag"><ion-icon name="cog-outline"></ion-icon> Blue Prism</span>
+                            <span class="tag"><ion-icon name="construct-outline"></ion-icon> Automation Anywhere</span>
+                            <span class="tag"><ion-icon name="infinite-outline"></ion-icon> n8n Workflows</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
                         <h3><ion-icon name="cloud-outline"></ion-icon> Platforms</h3>
                         <div class="skill-tags">
-                            <span class="tag">VS Code</span>
-                            <span class="tag">Salesforce</span>
-                            <span class="tag">Git</span>
-                            <span class="tag">GitHub</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Windows</span>
-                            <span class="tag">Linux</span>
+                            <span class="tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                            <span class="tag"><i class="devicon-salesforce-plain colored"></i> Salesforce</span>
+                            <span class="tag"><i class="devicon-git-plain colored"></i> Git</span>
+                            <span class="tag"><i class="devicon-github-original"></i> GitHub</span>
+                            <span class="tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+                            <span class="tag"><i class="devicon-windows8-original colored"></i> Windows</span>
+                            <span class="tag"><i class="devicon-linux-plain colored"></i> Linux</span>
                         </div>
                     </div>
                 </div>
@@ -208,7 +214,7 @@
                 <div class="featured-project">
                     <div class="project-img-container"
                         style="background-color: var(--bg-secondary); position: relative; overflow: hidden; height: 350px;">
-                        <img src="assets/images/ride-matching.png" alt="Ride Matching System"
+                        <img src="assets/images/ride-matching-system.png" alt="Ride Matching System"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-info">
@@ -218,9 +224,9 @@
                             generating optimal driver-to-rider dispatch matches mapping dynamic geospatial coordinates.
                         </p>
                         <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>GeoSpatial APIs</span>
-                            <span>Backend Architecture</span>
+                            <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span><ion-icon name="map-outline"></ion-icon> GeoSpatial APIs</span>
+                            <span><ion-icon name="layers-outline"></ion-icon> Backend Architecture</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn btn-outline btn-small" target="_blank"><ion-icon
@@ -245,9 +251,9 @@
                             systematically handling high-throughput idempotent financial requests via distributed
                             architecture.</p>
                         <div class="project-tech">
-                            <span>Java Spring</span>
-                            <span>Microservices</span>
-                            <span>Cryptography</span>
+                            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span><ion-icon name="cube-outline"></ion-icon> Microservices</span>
+                            <span><ion-icon name="lock-closed-outline"></ion-icon> Cryptography</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn btn-outline btn-small" target="_blank"><ion-icon
@@ -269,9 +275,9 @@
                                 transcribe and post-edit complex audio data into text utilizing deep neural networks.
                             </p>
                             <div class="project-tech-small">
-                                <span>Deep Learning</span>
-                                <span>Speech-to-Text</span>
-                                <span>Python</span>
+                                <span><ion-icon name="layers-outline"></ion-icon> Deep Learning</span>
+                                <span><ion-icon name="mic-outline"></ion-icon> Speech-to-Text</span>
+                                <span><i class="devicon-python-plain colored"></i> Python</span>
                             </div>
                             <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
                                     name="logo-github"></ion-icon> Source Code</a>
@@ -285,9 +291,9 @@
                             <p style="flex: 1;">An NLP pipeline using ML models to dynamically classify the emotional
                                 sentiment of unstructured text and sentiment data.</p>
                             <div class="project-tech-small">
-                                <span>NLP</span>
-                                <span>Python</span>
-                                <span>Transformers</span>
+                                <span><ion-icon name="text-outline"></ion-icon> NLP</span>
+                                <span><i class="devicon-python-plain colored"></i> Python</span>
+                                <span><ion-icon name="flash-outline"></ion-icon> Transformers</span>
                             </div>
                             <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
                                     name="logo-github"></ion-icon> Source Code</a>
@@ -301,9 +307,9 @@
                             <p style="flex: 1;">A data-driven machine learning model forecasting Air Quality Index (AQI)
                                 thresholds based on continuous environmental factors.</p>
                             <div class="project-tech-small">
-                                <span>Scikit-Learn</span>
-                                <span>Regression</span>
-                                <span>Data Science</span>
+                                <span><ion-icon name="stats-chart-outline"></ion-icon> Scikit-Learn</span>
+                                <span><ion-icon name="trending-up-outline"></ion-icon> Regression</span>
+                                <span><ion-icon name="flask-outline"></ion-icon> Data Science</span>
                             </div>
                             <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
                                     name="logo-github"></ion-icon> Source Code</a>
@@ -333,9 +339,9 @@
                             <p style="flex: 1;">Socket-based application architecture tracing continuous GPS coordinate
                                 data streams onto dynamic frontend mapping interfaces.</p>
                             <div class="project-tech-small">
-                                <span>WebSockets</span>
-                                <span>React</span>
-                                <span>Logistics</span>
+                                <span><ion-icon name="swap-horizontal-outline"></ion-icon> WebSockets</span>
+                                <span><i class="devicon-react-original colored"></i> React</span>
+                                <span><ion-icon name="navigate-outline"></ion-icon> Logistics</span>
                             </div>
                             <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
                                     name="logo-github"></ion-icon> Source Code</a>
@@ -349,9 +355,9 @@
                             <p style="flex: 1;">A full-stack relational database application handling multi-role
                                 authenticated inventory tracking and book circulation logic.</p>
                             <div class="project-tech-small">
-                                <span>SQL</span>
-                                <span>DBMS Engine</span>
-                                <span>Full-Stack</span>
+                                <span><i class="devicon-mysql-plain colored"></i> SQL</span>
+                                <span><ion-icon name="server-outline"></ion-icon> DBMS Engine</span>
+                                <span><ion-icon name="globe-outline"></ion-icon> Full-Stack</span>
                             </div>
                             <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
                                     name="logo-github"></ion-icon> Source Code</a>
@@ -365,9 +371,9 @@
                             <p style="flex: 1;">A dashboard dynamically aggregating statistical scores and algorithmic
                                 competition ratings across top platforms via REST APIs.</p>
                             <div class="project-tech-small">
-                                <span>MERN Stack</span>
-                                <span>REST APIs</span>
-                                <span>Data Aggregation</span>
+                                <span><i class="devicon-mongodb-plain colored"></i> MERN Stack</span>
+                                <span><ion-icon name="cloud-download-outline"></ion-icon> REST APIs</span>
+                                <span><ion-icon name="pie-chart-outline"></ion-icon> Data Aggregation</span>
                             </div>
                             <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
                                     name="logo-github"></ion-icon> Source Code</a>
@@ -470,21 +476,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="card-content"
-                            style="border-top: 4px solid var(--accent-color); height: 100%; display: flex; flex-direction: column;">
-                            <h4>Expense Tracker Engine</h4>
-                            <p style="flex: 1;">A financial management dashboard that visually parses dynamic income
-                                streams and automatically scales complex dataviz graphing logic.</p>
-                            <div class="project-tech-small">
-                                <span>React</span>
-                                <span>Chart.js</span>
-                                <span>DataViz</span>
-                            </div>
-                            <a href="#" class="grid-link" style="margin-top: 1rem;"><ion-icon
-                                    name="logo-github"></ion-icon> Source Code</a>
-                        </div>
-                    </div>
+
 
                 </div>
 
@@ -564,20 +556,22 @@
                     </div>
 
                     <!-- Cert Card 4 -->
-                    <div class="cert-card" data-src="rjcerti/Gen AI NESSCOM.png" data-title="Generative AI â€” NASSCOM"
+                    <div class="cert-card" data-src="rjcerti/Gen AI NESSCOM.png" data-title="Generative AI NESSCOM"
                         data-type="img">
                         <div
                             style="background: #fff; height: 180px; display:flex; align-items:center; justify-content:center; border-bottom: 1px solid var(--border-color); overflow: hidden;">
                             <ion-icon name="sparkles-outline"
                                 style="font-size: 4rem; color: var(--accent-color);"></ion-icon>
-                            <img class="cert-preview" src="rjcerti/Gen AI NESSCOM.png" alt="Gen AI Certificate">
+                            <img class="cert-preview" src="rjcerti/Gen AI NESSCOM.png"
+                                alt="Generative AI NESSCOM certificate">
                         </div>
                         <div class="cert-overlay">
                             <ion-icon name="expand-outline" style="font-size: 3rem; color: #fff;"></ion-icon>
                         </div>
                         <div class="cert-info">
-                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Generative AI</h4>
-                            <p style="font-size: 0.85rem;">NASSCOM</p>
+                            <h4 style="font-size: 1rem; line-height: 1.4; margin-bottom: 0.3rem;">Generative AI NESSCOM
+                            </h4>
+                            <p style="font-size: 0.85rem;">Artificial Intelligence</p>
                         </div>
                     </div>
 
@@ -889,7 +883,7 @@
 
                     <!-- B.Tech -->
                     <div class="timeline-item">
-                        <div class="timeline-dot"></div>
+                        <div class="timeline-dot dot-filled"></div>
                         <div class="timeline-content">
                             <span class="timeline-date">2023 – Present</span>
                             <h3>B.Tech — Computer Science & Engineering <span
@@ -932,6 +926,58 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Coding Profile Section -->
+        <section id="coding-profile" class="coding-section">
+            <div class="section-container">
+                <h2 class="section-title">Coding Profile</h2>
+                <div class="coding-stats-grid">
+                    <div class="coding-stat-card">
+                        <div class="stat-icon"><ion-icon name="code-working-outline"></ion-icon></div>
+                        <div class="stat-info">
+                            <h3>DSA Mastery</h3>
+                            <p class="stat-highlight">500+ Questions Solved</p>
+                            <p class="stat-detail">Consistently solving algorithmic challenges on LeetCode,
+                                GeeksforGeeks, and other competitive platforms.</p>
+                            <a href="https://codolio.com/profile/Jay_" target="_blank" class="stat-link">View on Codolio
+                                <ion-icon name="open-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="coding-stat-card">
+                        <div class="stat-icon"><ion-icon name="podium-outline"></ion-icon></div>
+                        <div class="stat-info">
+                            <h3>Competitive Status</h3>
+                            <p class="stat-highlight">LeetCode Rating: 1525</p>
+                            <p class="stat-detail">Strong ranking in global contests, demonstrating speed, accuracy, and
+                                efficiency in problem-solving.</p>
+                            <a href="https://codolio.com/profile/Jay_" target="_blank" class="stat-link">View Overall
+                                Rank <ion-icon name="trending-up-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lifestyle Section -->
+        <section id="lifestyle" class="lifestyle-section">
+            <div class="section-container">
+                <h2 class="section-title">When I'm Not Coding</h2>
+                <div class="lifestyle-content">
+                    <div class="lifestyle-text">
+                        <p>Beyond the terminal, I find my balance in simple moments — occasionally getting lost in
+                            books, walking alone under an open blue sky, randomly stepping out with no plan, fooling
+                            around with friends, or just staring at the stars and letting thoughts wander.</p>
+                    </div>
+                    <div class="lifestyle-icons">
+                        <div class="life-icon" title="Reading"><ion-icon name="book-outline"></ion-icon></div>
+                        <div class="life-icon" title="Nature Walk"><ion-icon name="cloud-outline"></ion-icon></div>
+                        <div class="life-icon" title="Random Travels"><ion-icon name="map-outline"></ion-icon></div>
+                        <div class="life-icon" title="Friends"><ion-icon name="people-outline"></ion-icon></div>
+                        <div class="life-icon" title="Stargazing"><ion-icon name="sparkles-outline"></ion-icon></div>
+                    </div>
                 </div>
             </div>
         </section>

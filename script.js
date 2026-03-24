@@ -106,15 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return pdfJsPromise;
     }
 
-    async function renderPdfPreview(src, canvas, targetWidth, targetHeight, mode = 'contain') {
+    async function renderPdfPreview(src, canvas, targetWidth, targetHeight) {
         const pdfjsLib = await loadPdfJs();
         const loadingTask = pdfjsLib.getDocument({ url: src });
         const pdf = await loadingTask.promise;
         const page = await pdf.getPage(1);
         const baseViewport = page.getViewport({ scale: 1 });
-        const fitScale = mode === 'cover'
-            ? Math.max(targetWidth / baseViewport.width, targetHeight / baseViewport.height)
-            : Math.min(targetWidth / baseViewport.width, targetHeight / baseViewport.height);
+        const fitScale = Math.min(targetWidth / baseViewport.width, targetHeight / baseViewport.height);
         const scale = Math.max(fitScale, 0.1);
         const viewport = page.getViewport({ scale });
 
@@ -155,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const width = Math.max(mediaBox.clientWidth - 2, 280);
         const height = Math.max(mediaBox.clientHeight - 2, 180);
 
-        renderPdfPreview(src, canvas, width, height, 'cover').catch(() => {
+        renderPdfPreview(src, canvas, width, height).catch(() => {
             previewWrapper.classList.add('cert-mobile-preview-error');
         });
     }
@@ -165,6 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const preview = card.querySelector('.cert-preview');
             const existingFallback = card.querySelector('.cert-mobile-preview');
             const cardMedia = card.firstElementChild;
+            const cardType = card.getAttribute('data-type') || 'pdf';
+
+            if (cardType === 'img') {
+                if (existingFallback) existingFallback.remove();
+                return;
+            }
 
             if (isMobileCertificateView()) {
                 if (preview) {
@@ -218,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(() => {
                 const width = Math.max(certModalBody.clientWidth - 2, 320);
                 const height = Math.max(certModalBody.clientHeight - 2, 420);
-                renderPdfPreview(src, canvas, width, height, 'contain').catch(() => {
+                renderPdfPreview(src, canvas, width, height).catch(() => {
                     wrapper.classList.add('cert-modal-preview-error');
                 });
             });
